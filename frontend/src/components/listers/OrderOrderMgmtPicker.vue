@@ -18,10 +18,10 @@
                                 UserId :  {{item.userId }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                ProducName :  {{item.producName }}
+                                ProductName :  {{item.productName }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                ProducId :  {{item.producId }}
+                                ProductId :  {{item.productId }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
                                 Qty :  {{item.qty }}

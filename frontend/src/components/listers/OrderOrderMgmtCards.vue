@@ -110,8 +110,8 @@
             
             me.newValue = {
                 'userId': '',
-                'producName': '',
-                'producId': 0,
+                'productName': '',
+                'productId': 0,
                 'qty': 0,
                 'status': '',
                 'orderDt': '2023-11-07',

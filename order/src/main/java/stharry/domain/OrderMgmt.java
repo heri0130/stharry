@@ -21,9 +21,9 @@ public class OrderMgmt {
 
     private String userId;
 
-    private String producName;
+    private String productName;
 
-    private Long producId;
+    private Long productId;
 
     private Integer qty;
 

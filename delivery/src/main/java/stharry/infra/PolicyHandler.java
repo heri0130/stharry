@@ -41,5 +41,21 @@ public class PolicyHandler {
         // Sample Logic //
         DeliveryMgmt.startDelivery(event);
     }
+
+    @StreamListener(
+        value = KafkaProcessor.INPUT,
+        condition = "headers['type']=='OrderCancelled'"
+    )
+    public void wheneverOrderCancelled_DeliveryCancel(
+        @Payload OrderCancelled orderCancelled
+    ) {
+        OrderCancelled event = orderCancelled;
+        System.out.println(
+            "\n\n##### listener DeliveryCancel : " + orderCancelled + "\n\n"
+        );
+
+        // Sample Logic //
+        DeliveryMgmt.deliveryCancel(event);
+    }
 }
 //>>> Clean Arch / Inbound Adaptor

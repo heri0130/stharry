@@ -9,10 +9,10 @@
                 <String label="UserId" v-model="item.userId" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <String label="ProducName" v-model="item.producName" :editMode="editMode" @change="change" />
+                <String label="ProductName" v-model="item.productName" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <Number label="ProducId" v-model="item.producId" :editMode="editMode" @change="change" />
+                <Number label="ProductId" v-model="item.productId" :editMode="editMode" @change="change" />
             </div>
             <div>
                 <Number label="Qty" v-model="item.qty" :editMode="editMode" @change="change" />

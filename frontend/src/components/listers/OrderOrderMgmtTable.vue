@@ -68,8 +68,8 @@
                 [
                     { text: "id", value: "id" },
                     { text: "userId", value: "userId" },
-                    { text: "producName", value: "producName" },
-                    { text: "producId", value: "producId" },
+                    { text: "productName", value: "productName" },
+                    { text: "productId", value: "productId" },
                     { text: "qty", value: "qty" },
                     { text: "status", value: "status" },
                     { text: "orderDt", value: "orderDt" },
@@ -92,8 +92,8 @@
 
             this.newValue = {
                 'userId': '',
-                'producName': '',
-                'producId': 0,
+                'productName': '',
+                'productId': 0,
                 'qty': 0,
                 'status': '',
                 'orderDt': '2023-11-07',
