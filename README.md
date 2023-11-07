@@ -9,7 +9,8 @@
   ![image](https://github.com/heri0130/stharry/assets/133316599/6b6ca294-8749-44f7-94ad-fc9c3ed7997b)
 
 3. 도메인이벤트 pub/sub
-   이미지 첨부!
+   ![image](https://github.com/heri0130/stharry/assets/133316599/4d6b6fa0-b439-498c-b36f-fbeb8678ffcf)
+
 
    
 # 
