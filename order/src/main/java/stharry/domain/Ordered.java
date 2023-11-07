@@ -9,7 +9,7 @@ import stharry.infra.AbstractEvent;
 //<<< DDD / Domain Event
 @Data
 @ToString
-public class OrderCancelled extends AbstractEvent {
+public class Ordered extends AbstractEvent {
 
     private Long id;
     private String userId;
@@ -18,12 +18,13 @@ public class OrderCancelled extends AbstractEvent {
     private Integer qty;
     private String status;
     private Date orderDt;
+    private String address;
 
-    public OrderCancelled(OrderMgmt aggregate) {
+    public Ordered(OrderMgmt aggregate) {
         super(aggregate);
     }
 
-    public OrderCancelled() {
+    public Ordered() {
         super();
     }
 }

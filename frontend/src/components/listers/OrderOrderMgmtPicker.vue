@@ -18,10 +18,10 @@
                                 UserId :  {{item.userId }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                ProducName :  {{item.producName }}
+                                ProductName :  {{item.productName }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                ProducId :  {{item.producId }}
+                                ProductId :  {{item.productId }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
                                 Qty :  {{item.qty }}
@@ -34,9 +34,6 @@
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
                                 Address :  {{item.address }}
-                            </v-list-item-subtitle>
-                            <v-list-item-subtitle>
-                                 :  {{item. }}
                             </v-list-item-subtitle>
                         </v-list-item-content>
 
@@ -89,8 +86,6 @@
                 if(val != undefined) {
                     var arr = this.list[val]._links.self.href.split('/');
                     obj['id'] = arr[4]; 
-                    
-                    
                     
                     
                     

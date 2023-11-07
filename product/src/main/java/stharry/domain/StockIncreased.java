@@ -9,21 +9,18 @@ import stharry.infra.AbstractEvent;
 //<<< DDD / Domain Event
 @Data
 @ToString
-public class OrderCancelled extends AbstractEvent {
+public class StockIncreased extends AbstractEvent {
 
     private Long id;
-    private String userId;
     private String productName;
-    private Long productId;
-    private Integer qty;
-    private String status;
-    private Date orderDt;
+    private String productImg;
+    private Integer stock;
 
-    public OrderCancelled(OrderMgmt aggregate) {
+    public StockIncreased(InventoryMgmt aggregate) {
         super(aggregate);
     }
 
-    public OrderCancelled() {
+    public StockIncreased() {
         super();
     }
 }
