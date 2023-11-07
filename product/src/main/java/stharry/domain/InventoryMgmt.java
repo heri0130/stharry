@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.*;
 import lombok.Data;
 import stharry.ProductApplication;
+import stharry.domain.StockDecreased;
 import stharry.domain.StockIncreased;
 
 @Entity
@@ -23,6 +24,12 @@ public class InventoryMgmt {
     private String productImg;
 
     private Integer stock;
+
+    @PostPersist
+    public void onPostPersist() {
+        StockDecreased stockDecreased = new StockDecreased(this);
+        stockDecreased.publishAfterCommit();
+    }
 
     @PostUpdate
     public void onPostUpdate() {
@@ -45,6 +52,8 @@ public class InventoryMgmt {
         InventoryMgmt inventoryMgmt = new InventoryMgmt();
         repository().save(inventoryMgmt);
 
+        StockDecreased stockDecreased = new StockDecreased(inventoryMgmt);
+        stockDecreased.publishAfterCommit();
         */
 
         /** Example 2:  finding and process
@@ -54,6 +63,36 @@ public class InventoryMgmt {
             inventoryMgmt // do something
             repository().save(inventoryMgmt);
 
+            StockDecreased stockDecreased = new StockDecreased(inventoryMgmt);
+            stockDecreased.publishAfterCommit();
+
+         });
+        */
+
+    }
+
+    //>>> Clean Arch / Port Method
+    //<<< Clean Arch / Port Method
+    public static void decreaseStock(DeliveryStarted deliveryStarted) {
+        //implement business logic here:
+
+        /** Example 1:  new item 
+        InventoryMgmt inventoryMgmt = new InventoryMgmt();
+        repository().save(inventoryMgmt);
+
+        StockDecreased stockDecreased = new StockDecreased(inventoryMgmt);
+        stockDecreased.publishAfterCommit();
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(deliveryStarted.get???()).ifPresent(inventoryMgmt->{
+            
+            inventoryMgmt // do something
+            repository().save(inventoryMgmt);
+
+            StockDecreased stockDecreased = new StockDecreased(inventoryMgmt);
+            stockDecreased.publishAfterCommit();
 
          });
         */

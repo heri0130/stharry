@@ -21,6 +21,10 @@ spring:
           uri: http://localhost:8084
           predicates:
             - Path=/inventoryMgmts/**, 
+        - id: coustomercenter
+          uri: http://localhost:8085
+          predicates:
+            - Path=, 
         - id: frontend
           uri: http://localhost:8080
           predicates:
@@ -57,6 +61,10 @@ spring:
           uri: http://product:8080
           predicates:
             - Path=/inventoryMgmts/**, 
+        - id: coustomercenter
+          uri: http://coustomercenter:8080
+          predicates:
+            - Path=, 
         - id: frontend
           uri: http://frontend:8080
           predicates:

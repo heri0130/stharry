@@ -41,6 +41,22 @@ public class PolicyHandler {
 
     @StreamListener(
         value = KafkaProcessor.INPUT,
+        condition = "headers['type']=='DeliveryStarted'"
+    )
+    public void wheneverDeliveryStarted_DecreaseStock(
+        @Payload DeliveryStarted deliveryStarted
+    ) {
+        DeliveryStarted event = deliveryStarted;
+        System.out.println(
+            "\n\n##### listener DecreaseStock : " + deliveryStarted + "\n\n"
+        );
+
+        // Sample Logic //
+        InventoryMgmt.decreaseStock(event);
+    }
+
+    @StreamListener(
+        value = KafkaProcessor.INPUT,
         condition = "headers['type']=='DeliveryReturned'"
     )
     public void wheneverDeliveryReturned_IncreaseStock(

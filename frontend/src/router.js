@@ -15,6 +15,7 @@ import ProductInventoryMgmtManager from "./components/listers/ProductInventoryMg
 import ProductInventoryMgmtDetail from "./components/listers/ProductInventoryMgmtDetail"
 
 
+
 export default new Router({
     // mode: 'history',
     base: process.env.BASE_URL,
@@ -51,6 +52,7 @@ export default new Router({
                 name: 'ProductInventoryMgmtDetail',
                 component: ProductInventoryMgmtDetail
             },
+
 
 
 
