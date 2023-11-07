@@ -42,7 +42,7 @@ mvn spring-boot:run
 ```
 - product
 ```
- http :8088/inventoryMgmts id="id" productName="productName" productImg="productImg" stock="stock" ="" ="" ="" 
+ http :8088/inventoryMgmts id="id" productName="productName" productImg="productImg" stock="stock" 
 ```
 
 
