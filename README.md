@@ -6,7 +6,8 @@
    - ㅇㅇㅇ
 * 바운디드컨텍티드는 최소 3개
 2. 이벤트스토밍 모델
-  이미지 첨부
+  ![image](https://github.com/heri0130/stharry/assets/133316599/6b6ca294-8749-44f7-94ad-fc9c3ed7997b)
+
 
 # 
 
